@@ -1,0 +1,118 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  color: hsla(240, 6%, 21%, 1);
+}
+
+body {
+  font-size: 1.6rem;
+  background: #f5fffb;
+}
+
+.container {
+  height: 33.6rem;
+  width: 82.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 196px;
+  margin-inline: auto;
+}
+
+.card-timer {
+  display: flex;
+  height: 21.3rem;
+  width: 32.1rem;
+  position: relative;
+}
+
+.card-timer span {
+  font-size: 126.17px;
+}
+
+.card-timer button {
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  gap: 4rem;
+}
+
+.sounds {
+  display: flex;
+  width: 30.8rem;
+  height: 33.6rem;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 3.2rem;
+}
+
+.sounds img {
+  width: 13.8rem;
+  height: 15.2rem;
+}
+
+.sounds button {
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+}
+
+.hide {
+  display: none;
+}
+
+.timer {
+  display: flex;
+}
+
+.forest:hover {
+  filter: invert(81%) sepia(51%) saturate(2876%) hue-rotate(60deg)
+    brightness(104%) contrast(60%);
+}
+
+.rain:hover {
+  filter: invert(80%) sepia(51%) saturate(2878%) hue-rotate(150deg)
+    brightness(100%) contrast(70%);
+}
+
+.shop:hover {
+  filter: invert(80%) sepia(51%) saturate(2878%) hue-rotate(10deg)
+    brightness(100%) contrast(70%);
+}
+.fire:hover {
+  filter: invert(70%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+    brightness(104%) contrast(97%);
+}
+
+@media (max-width: 360px) {
+  .container {
+    max-width: 100%;
+    display: grid;
+    gap: -10px;
+  }
+
+  .card-timer {
+    display: flex;
+  }
+
+  .sounds svg {
+    max-width: 50%;
+  }
+
+  .timer span {
+    font-size: 100px;
+    margin-left: 15px;
+  }
+}
