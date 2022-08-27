@@ -77,26 +77,7 @@ button {
   display: flex;
 }
 
-.forest:hover {
-  filter: invert(81%) sepia(51%) saturate(2876%) hue-rotate(60deg)
-    brightness(104%) contrast(60%);
-}
-
-.rain:hover {
-  filter: invert(80%) sepia(51%) saturate(2878%) hue-rotate(150deg)
-    brightness(100%) contrast(70%);
-}
-
-.shop:hover {
-  filter: invert(80%) sepia(51%) saturate(2878%) hue-rotate(10deg)
-    brightness(100%) contrast(70%);
-}
-.fire:hover {
-  filter: invert(70%) sepia(51%) saturate(2878%) hue-rotate(346deg)
-    brightness(104%) contrast(97%);
-}
-
-@media (max-width: 360px) {
+@media (min-width: 360px) {
   .container {
     max-width: 100%;
     display: grid;
@@ -104,7 +85,6 @@ button {
   }
 
   .card-timer {
-    display: flex;
   }
 
   .sounds svg {
@@ -113,6 +93,5 @@ button {
 
   .timer span {
     font-size: 100px;
-    margin-left: 15px;
   }
 }

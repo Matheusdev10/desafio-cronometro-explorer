@@ -1,7 +1,7 @@
 const buttonPlay = document.querySelector('.button-play');
 const buttonPause = document.querySelector('.button-pause');
-const minutesDisplay = document.querySelector('.minutes');
-const secondsDisplay = document.querySelector('.seconds');
+let minutesDisplay = document.querySelector('.minutes');
+let secondsDisplay = document.querySelector('.seconds');
 const timer = document.querySelector('.timer');
 const buttonAdd = document.querySelector('.button-add');
 const buttonStop = document.querySelector('.button-stop');
@@ -11,6 +11,11 @@ const cardForest = document.querySelector('.card-forest');
 const cardRain = document.querySelector('.card-rain');
 const cardCoffeeShop = document.querySelector('.card-coffee-shop');
 const cardFireplace = document.querySelector('.card-fireplace');
+const svgFire = document.querySelector('.fire');
+const forest = document.querySelector('.forest');
+const rain = document.querySelector('.rain');
+const shop = document.querySelector('.shop');
+const fire = document.querySelector('.fire');
 let timerTimeOut;
 let seconds = 0;
 
@@ -27,22 +32,42 @@ cardFireplace.addEventListener('click', handleSoundFireplace);
 
 function handleSoundForest() {
   const audio = document.querySelector('.soundForest');
+  forest.classList.remove('hide');
+  rain.classList.add('hide');
+  shop.classList.add('hide');
+  fire.classList.add('hide');
   audio.play();
+  audio.loop = true;
 }
 
 function handleSoundRain() {
   const audio = document.querySelector('.soundRain');
+  rain.classList.remove('hide');
+  forest.classList.add('hide');
+  shop.classList.add('hide');
+  fire.classList.add('hide');
   audio.play();
+  audio.loop = true;
 }
 
 function handleSoundCoffeeShop() {
   const audio = document.querySelector('.soundCoffeeShop');
+  shop.classList.remove('hide');
+  forest.classList.add('hide');
+  rain.classList.add('hide');
+  fire.classList.add('hide');
   audio.play();
+  audio.loop = true;
 }
 
 function handleSoundFireplace() {
   const audio = document.querySelector('.soundFireplace');
+  fire.classList.remove('hide');
+  forest.classList.add('hide');
+  rain.classList.add('hide');
+  shop.classList.add('hide');
   audio.play();
+  audio.loop = true;
 }
 
 function handlePlay() {
